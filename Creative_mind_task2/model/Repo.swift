@@ -17,6 +17,7 @@ class Repo:NSObject {
     var name: String?
     var desc:String?
     var fork:Bool?
+    var html:String?
     
     init(with json: JSON) {
         
@@ -28,10 +29,7 @@ class Repo:NSObject {
         self.desc = json["description"].string
         
         self.fork = json["fork"].bool
+        
+        self.html = json["html_url"].string
     }
-//    func forkedRepo(fork:Bool)  {
-//        if fork == true {
-//            
-//        }
-//    }
 }

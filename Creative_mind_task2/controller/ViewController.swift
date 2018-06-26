@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     //Mark:Properities
     
     @IBOutlet weak var tableView: UITableView!
-    
     var repos = [Repo]()
 
     
@@ -25,6 +24,7 @@ class ViewController: UIViewController {
         handleRefresh()
     }
 
+    //handleRefresh
     private func handleRefresh() {
         API.getSquare() { (error : Error?, repo : [Repo]?) in
             
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
             }
         }
  }
+    
 }
 //extension for UITableView
 extension ViewController:UITableViewDelegate,UITableViewDataSource{
@@ -59,8 +60,23 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         return UITableViewCell()
     }
     
+    //didSelect
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        performSegue(withIdentifier: "html_url", sender: repos[indexPath.item])
+
     }
 
+}
+
+// prepare Segue
+extension ViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "html_url" {
+            if let vc = segue.destination as? htmlVC {
+                vc.repo = sender as? Repo
+            }
+        }
+    }
 }

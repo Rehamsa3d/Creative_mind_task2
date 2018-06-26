@@ -16,6 +16,7 @@
 		80D5060520E2316300313DA5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060420E2316300313DA5 /* Repo.swift */; };
 		80D5060720E2318200313DA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060620E2318200313DA5 /* API.swift */; };
 		80D5060920E2362800313DA5 /* repoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */; };
+		80D5060D20E24D7900313DA5 /* htmlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060C20E24D7900313DA5 /* htmlVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		80D5060420E2316300313DA5 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		80D5060620E2318200313DA5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repoCellTableViewCell.swift; sourceTree = "<group>"; };
+		80D5060C20E24D7900313DA5 /* htmlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = htmlVC.swift; sourceTree = "<group>"; };
 		C6E20B81784BD0FBAA38D59F /* Pods-Creative_mind_task2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Creative_mind_task2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Creative_mind_task2/Pods-Creative_mind_task2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			children = (
 				80D505F020E2307C00313DA5 /* ViewController.swift */,
 				80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */,
+				80D5060C20E24D7900313DA5 /* htmlVC.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D5060D20E24D7900313DA5 /* htmlVC.swift in Sources */,
 				80D5060520E2316300313DA5 /* Repo.swift in Sources */,
 				80D505F120E2307C00313DA5 /* ViewController.swift in Sources */,
 				80D5060920E2362800313DA5 /* repoCellTableViewCell.swift in Sources */,
@@ -395,7 +399,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU6FK3PG77;
 				INFOPLIST_FILE = Creative_mind_task2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Creative-mind-task2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -411,7 +418,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU6FK3PG77;
 				INFOPLIST_FILE = Creative_mind_task2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Creative-mind-task2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
