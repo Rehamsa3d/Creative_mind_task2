@@ -8,7 +8,8 @@ target 'Creative_mind_task2' do
   # Pods for Creative_mind_task2
 pod 'Alamofire'
 pod 'SwiftyJSON'
-
+pod 'PagedArray'
+pod 'PagingTableView'
 
 
 end

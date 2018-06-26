@@ -13,9 +13,9 @@ import Alamofire
 
 class API{
     
-    class func getSquare(completion: @escaping (_ error :Error? , _ repo :[Repo]? )->Void){
+    class func getSquare(page_num:Int,completion: @escaping (_ error :Error? , _ repo :[Repo]? )->Void){
         
-        let url = "https://api.github.com/users/square/repos"
+        let url = "https://api.github.com/users/square/repos?page=\(page_num)&per_page=10"
         
         Alamofire.request(url, method: .get).responseJSON { response in
             

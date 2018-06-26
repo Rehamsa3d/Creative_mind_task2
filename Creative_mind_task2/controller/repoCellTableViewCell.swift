@@ -29,10 +29,9 @@ class repoCellTableViewCell: UITableViewCell {
         
 
         if data.fork == true {
-                backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+                backgroundColor = #colorLiteral(red: 0.3974026913, green: 0.701774423, blue: 0.7133001512, alpha: 1)
         }else{
             backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-
         }
         
     }
