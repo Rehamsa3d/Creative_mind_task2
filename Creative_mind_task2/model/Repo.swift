@@ -7,6 +7,31 @@
 //
 
 import Foundation
-class Repo {
+import SwiftyJSON
+
+class Repo:NSObject {
+    //Mark : Properities
     
+    var id:Int?
+    var owner: String?
+    var name: String?
+    var desc:String?
+    var fork:Bool?
+    
+    init(with json: JSON) {
+        
+        self.id = json["id"].int
+        
+        self.owner = json["owner"]["login"].string
+        self.name = json["name"].string
+
+        self.desc = json["description"].string
+        
+        self.fork = json["fork"].bool
+    }
+//    func forkedRepo(fork:Bool)  {
+//        if fork == true {
+//            
+//        }
+//    }
 }

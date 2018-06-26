@@ -7,7 +7,46 @@
 //
 
 import Foundation
+import UIKit
+import SwiftyJSON
+import Alamofire
 
 class API{
     
+    class func getSquare(completion: @escaping (_ error :Error? , _ repo :[Repo]? )->Void){
+        
+        let url = "https://api.github.com/users/square/repos"
+        
+        Alamofire.request(url, method: .get).responseJSON { response in
+            
+            switch response.result{
+                
+            case .failure(let error):
+                
+                completion(error, nil)
+                print(error)
+                
+            case .success(let value):
+                
+                let json = JSON(value)
+                
+                guard let jsonArr = json.array else{
+                    
+                    completion(nil, nil)
+                    
+                    return
+                }
+                
+                var repos = [Repo]()
+                
+                for item in jsonArr {
+                    
+                    let repo = Repo(with: item)
+                    repos.append(repo)
+                }
+                
+                completion(nil, repos)
+            }
+        }
+    }
 }

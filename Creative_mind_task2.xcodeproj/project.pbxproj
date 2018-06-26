@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D77D10D901B6A9F366C6080 /* Pods_Creative_mind_task2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5AF2F648E5A28E4FD0C308 /* Pods_Creative_mind_task2.framework */; };
 		80D505EF20E2307C00313DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D505EE20E2307C00313DA5 /* AppDelegate.swift */; };
 		80D505F120E2307C00313DA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D505F020E2307C00313DA5 /* ViewController.swift */; };
 		80D505F420E2307C00313DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D505F220E2307C00313DA5 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5AF2F648E5A28E4FD0C308 /* Pods_Creative_mind_task2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Creative_mind_task2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8A0B8438205549FDAA3B80 /* Pods-Creative_mind_task2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Creative_mind_task2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Creative_mind_task2/Pods-Creative_mind_task2.debug.xcconfig"; sourceTree = "<group>"; };
 		80D505EB20E2307C00313DA5 /* Creative_mind_task2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Creative_mind_task2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80D505EE20E2307C00313DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80D505F020E2307C00313DA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		80D5060420E2316300313DA5 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		80D5060620E2318200313DA5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repoCellTableViewCell.swift; sourceTree = "<group>"; };
+		C6E20B81784BD0FBAA38D59F /* Pods-Creative_mind_task2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Creative_mind_task2.release.xcconfig"; path = "Pods/Target Support Files/Pods-Creative_mind_task2/Pods-Creative_mind_task2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D77D10D901B6A9F366C6080 /* Pods_Creative_mind_task2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				80D505ED20E2307C00313DA5 /* Creative_mind_task2 */,
 				80D505EC20E2307C00313DA5 /* Products */,
+				8B48F2F3F9A6CD46AC92C1E2 /* Pods */,
+				CCB8E9B7189D24FF0B898D68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +112,23 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		8B48F2F3F9A6CD46AC92C1E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D8A0B8438205549FDAA3B80 /* Pods-Creative_mind_task2.debug.xcconfig */,
+				C6E20B81784BD0FBAA38D59F /* Pods-Creative_mind_task2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCB8E9B7189D24FF0B898D68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C5AF2F648E5A28E4FD0C308 /* Pods_Creative_mind_task2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 80D505FD20E2307E00313DA5 /* Build configuration list for PBXNativeTarget "Creative_mind_task2" */;
 			buildPhases = (
+				788D51BF028276F3556FF65D /* [CP] Check Pods Manifest.lock */,
 				80D505E720E2307C00313DA5 /* Sources */,
 				80D505E820E2307C00313DA5 /* Frameworks */,
 				80D505E920E2307C00313DA5 /* Resources */,
+				5F01D1DD13DC7C8EC4E0DDBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +196,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F01D1DD13DC7C8EC4E0DDBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Creative_mind_task2/Pods-Creative_mind_task2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Creative_mind_task2/Pods-Creative_mind_task2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		788D51BF028276F3556FF65D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Creative_mind_task2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80D505E720E2307C00313DA5 /* Sources */ = {
@@ -322,15 +389,13 @@
 		};
 		80D505FE20E2307E00313DA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8A0B8438205549FDAA3B80 /* Pods-Creative_mind_task2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU6FK3PG77;
 				INFOPLIST_FILE = Creative_mind_task2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Creative-mind-task2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -340,15 +405,13 @@
 		};
 		80D505FF20E2307E00313DA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E20B81784BD0FBAA38D59F /* Pods-Creative_mind_task2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MU6FK3PG77;
 				INFOPLIST_FILE = Creative_mind_task2/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Creative-mind-task2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
