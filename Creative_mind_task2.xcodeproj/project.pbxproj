@@ -12,6 +12,9 @@
 		80D505F420E2307C00313DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D505F220E2307C00313DA5 /* Main.storyboard */; };
 		80D505F620E2307E00313DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80D505F520E2307E00313DA5 /* Assets.xcassets */; };
 		80D505F920E2307E00313DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80D505F720E2307E00313DA5 /* LaunchScreen.storyboard */; };
+		80D5060520E2316300313DA5 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060420E2316300313DA5 /* Repo.swift */; };
+		80D5060720E2318200313DA5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060620E2318200313DA5 /* API.swift */; };
+		80D5060920E2362800313DA5 /* repoCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		80D505F520E2307E00313DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80D505F820E2307E00313DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80D505FA20E2307E00313DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D5060420E2316300313DA5 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		80D5060620E2318200313DA5 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repoCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		80D505ED20E2307C00313DA5 /* Creative_mind_task2 */ = {
 			isa = PBXGroup;
 			children = (
+				80D5060320E2309A00313DA5 /* API */,
+				80D5060220E2309400313DA5 /* model */,
+				80D5060120E2308F00313DA5 /* view */,
+				80D5060020E2308900313DA5 /* controller */,
 				80D505EE20E2307C00313DA5 /* AppDelegate.swift */,
-				80D505F020E2307C00313DA5 /* ViewController.swift */,
-				80D505F220E2307C00313DA5 /* Main.storyboard */,
 				80D505F520E2307E00313DA5 /* Assets.xcassets */,
-				80D505F720E2307E00313DA5 /* LaunchScreen.storyboard */,
 				80D505FA20E2307E00313DA5 /* Info.plist */,
 			);
 			path = Creative_mind_task2;
+			sourceTree = "<group>";
+		};
+		80D5060020E2308900313DA5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				80D505F020E2307C00313DA5 /* ViewController.swift */,
+				80D5060820E2362800313DA5 /* repoCellTableViewCell.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		80D5060120E2308F00313DA5 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				80D505F220E2307C00313DA5 /* Main.storyboard */,
+				80D505F720E2307E00313DA5 /* LaunchScreen.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		80D5060220E2309400313DA5 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				80D5060420E2316300313DA5 /* Repo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		80D5060320E2309A00313DA5 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				80D5060620E2318200313DA5 /* API.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80D5060520E2316300313DA5 /* Repo.swift in Sources */,
 				80D505F120E2307C00313DA5 /* ViewController.swift in Sources */,
+				80D5060920E2362800313DA5 /* repoCellTableViewCell.swift in Sources */,
+				80D5060720E2318200313DA5 /* API.swift in Sources */,
 				80D505EF20E2307C00313DA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
