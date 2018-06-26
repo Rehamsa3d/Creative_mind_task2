@@ -13,7 +13,7 @@ import Alamofire
 
 class API{
     
-    class func getSquare(page_num:Int,completion: @escaping (_ error :Error? , _ repo :[Repo]? )->Void){
+    class func getSquare(page_num:Int,completion: @escaping (_ error :Error? , _ repo :[Repo]?, _ json :JSON? )->Void){
         
         let url = "https://api.github.com/users/square/repos?page=\(page_num)&per_page=10"
         
@@ -23,7 +23,7 @@ class API{
                 
             case .failure(let error):
                 
-                completion(error, nil)
+                completion(error, nil, nil)
                 print(error)
                 
             case .success(let value):
@@ -32,7 +32,7 @@ class API{
                 
                 guard let jsonArr = json.array else{
                     
-                    completion(nil, nil)
+                    completion(nil, nil, json)
                     
                     return
                 }
@@ -45,7 +45,7 @@ class API{
                     repos.append(repo)
                 }
                 
-                completion(nil, repos)
+                completion(nil, repos, json)
             }
         }
     }

@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         setupTableview()
         setupRefreshControl()
         handleRefresh()
+        
+
     }
     
     //refreshData
@@ -59,17 +61,28 @@ class ViewController: UIViewController {
     
     //handleRefresh
     private func handleRefresh() {
-        for item in 1..<20 {
-            print(item)
-            API.getSquare(page_num: item) { (error : Error?, repo : [Repo]?) in
+        
+          //pageining
+//        for item in 1..<20 {
+//            print(item)
+//        }
+            API.getSquare(page_num: 1) { (error : Error?, repo : [Repo]?,json) in
                 
                 if let repos = repo {
                     self.repos = repos
                     self.tableView.reloadData()
                     self.refreshControl.endRefreshing()
                 }
+                
+                //cachedData
+                let cachedData = Repo(with: json!["id"])
+                DataStore.saveUser(cachedData)
+                
+                print(cachedData)
+                print(DataStore.saveUser(cachedData))
+
             }
-        }
+        
     }
 }
 
@@ -107,26 +120,6 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
     
 }
 
-//extension ViewController: PagingTableViewDelegate {
-//
-//
-//    func loadData(at page: Int, onComplete: @escaping ([Repo]) -> Void) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-//            let firstIndex = page * self.numberOfItemsPerPage
-//            guard firstIndex < self.repos.count else {
-//                onComplete([])
-//                return
-//            }
-//            let lastIndex = (page + 1) * self.numberOfItemsPerPage < self.repos.count ?
-//                (page + 1) * self.numberOfItemsPerPage : self.repos.count
-//            onComplete(Array(self.repos[firstIndex ..< lastIndex]))
-//        }
-//    }
-//    func paginate(_ tableView: PagingTableView, to page: Int) {
-//        tableView.isLoading = true
-//    }
-//
-//}
 // prepare Segue
 extension ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
